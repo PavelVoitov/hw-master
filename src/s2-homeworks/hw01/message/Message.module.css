@@ -1,22 +1,28 @@
 .message {
-
+    margin-top: 10px;
+    width: 900px;
 }
 
 .imageAndText {
-    width: 462px;
-    height: 77px;
+    position: relative;
+    width: 600px;
 }
 
 .imageAndText img {
+    display: block;
+    position:absolute; /* добавили */
+    bottom:0; /* добавили */
+    margin-top: 10px;
+    margin-left: 20px;
     width: 48px;
     height: 48px;
 }
 
 .text {
-    width: 414px;
-    height: 60px;
-    background: #F5F7FB;
-    box-shadow: 0px 5px 20px rgba(29, 33, 38, 0.03), 0px 1px 2px rgba(29, 33, 38, 0.1);
+    border-radius: 10px 10px 10px 0;
+    display: inline-block;
+    margin-left: 90px;
+    background-color: #ce9e02;
 }
 
 .text:after {
@@ -24,28 +30,40 @@
 }
 
 .name {
-    width: 35px;
+    margin: 5px;
     height: 20px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    line-height: 20px;
+    /*line-height: 20px;*/
 }
 
 .messageText {
+    margin-left: 5px;
+    margin-right: 20px;
+    margin-bottom: 5px;
     font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 14px;
 }
 
 .time {
+    margin-left: 30px;
+    margin-top: 5px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 12px;
     color: #000000;
+}
+
+.corner {
+    position:absolute; /* добавили */
+    bottom:0; /* добавили */
+    height: 15px;
+    width: 15px;
+    background: radial-gradient(circle at 0 0, rgba(0, 0, 0, 0) 15px, rgb(205, 157, 3) 0);
+    left: 75px;
 }

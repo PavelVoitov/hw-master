@@ -1,20 +1,43 @@
 .input:focus {
+
 }
 
 .input {
+
 }
 
 .inputWrapper {
 }
 
 .superInput {
+    border-radius: 5px;
+    height: 36px;
+    border: 2px solid grey;
+    background: none;
+    width: 300px;
+    margin: 10px;
 }
 
 .errorInput {
+    border-radius: 5px;
+    height: 36px;
+    background: pink;
+    width: 300px;
+    margin: 2px 5px;
+    border: 1px solid red;
 }
 
 .errorInput:focus {
+    cursor: pointer;
+    border: 1px solid #cc9c00;
 }
 
 .error {
+    margin-left: 10px;
+    display: block;
+    width: 200px;
+    font-family: inherit;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #f80909;
 }

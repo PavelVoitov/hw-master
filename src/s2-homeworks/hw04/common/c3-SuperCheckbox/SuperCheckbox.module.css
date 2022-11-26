@@ -29,13 +29,12 @@
 
 .checkbox:checked {
     appearance: none;
-
-    background-image: url('checked.svg');
-    /*background: #99ff99;*/
+    background-image: url('checked.png');
+    border: 2px solid #be1919;
 }
 
 .checkbox:focus {
-    border-color: #0059b3;
+    border-color: #06c;
 }
 
 .spanClassName {

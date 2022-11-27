@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react'
 import { message0 } from '../HW1'
 import s from './MessageSender.module.css'
+import SuperButton from "../../hw04/common/c2-SuperButton/SuperButton";
 
 // компонента, которая тестирует вашу компоненту (не изменять, any не трогать)
 const MessageSender = (props: any) => {
@@ -58,7 +59,7 @@ const MessageSender = (props: any) => {
                     onChange={onChange}
                     onKeyDown={onKeyDown}
                 />
-                <button
+                <SuperButton
                     id={'hw1-button'}
                     className={s.button}
 
@@ -67,7 +68,7 @@ const MessageSender = (props: any) => {
                     {/*текст кнопки могут изменить студенты*/}
                     Send
                     {/**/}
-                </button>
+                </SuperButton>
             </div>
         </>
     )

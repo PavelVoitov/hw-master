@@ -3,7 +3,10 @@
 }
 
 .textarea {
-
+    display: block;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
 }
 
 .button {
@@ -13,6 +16,7 @@
 .button:hover {
 
 }
+
 .button:active {
 
 }

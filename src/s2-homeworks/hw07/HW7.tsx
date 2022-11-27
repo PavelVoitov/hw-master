@@ -11,10 +11,15 @@ import s from './HW7.module.css'
 * 4 - сделать стили в соответствии с дизайном
 * */
 
+export type elementPropsType = {
+    id: number
+    title: string
+}
+
 const arr = [
-    { id: 1, value: 'x' },
-    { id: 2, value: 'y' },
-    { id: 3, value: 'z' },
+    { id: 1, title: 'Pre-Junior' },
+    { id: 2, title: 'Junior' },
+    { id: 3, title: 'Junior+' },
 ] // value может быть изменено
 
 const HW7 = () => {

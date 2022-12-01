@@ -1,3 +1,6 @@
-import s from './Loader.module.css'
 
-export const Loader = () => <div className={s.loader}/>
+import loader from './1474.gif'
+
+export const Loader = () => <div>
+    <img src={loader} alt={'Loading...'}/>
+</div>

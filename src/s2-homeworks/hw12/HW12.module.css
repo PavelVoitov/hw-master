@@ -13,14 +13,16 @@
     --background: #212A34;
 }
 
-html body {
+html {
     background-color: var(--background);
     color: var(--color);
 }
 
 .select {
+    color: #7f95ac;
     width: 80px;
     border: 2px solid #4cae50;
     height: 2em;
     border-radius: 3px;
+    background: none;
 }

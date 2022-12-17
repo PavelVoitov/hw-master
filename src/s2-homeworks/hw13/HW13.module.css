@@ -1,22 +1,33 @@
 .buttonsContainer {
+    margin-bottom: 20px;
 }
 
 .responseContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .imageContainer {
+    margin: 20px;
 }
 
 .image {
 }
 
-.textContainer{
+.textContainer {
+    margin: 20px;
 }
 
 .code {
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .text {
+    font-style: italic;
 }
+
 .info {
+    font-weight: bolder;
 }

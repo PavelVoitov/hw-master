@@ -16,7 +16,7 @@ type SuperInputTextPropsType = Omit<DefaultInputPropsType, 'type'> & {
     // и + ещё пропсы которых нет в стандартном инпуте
     onChangeText?: (value: string) => void
     onEnter?: () => void
-    error?: string
+    error?: React.ReactNode
     spanClassName?: string
 }
 

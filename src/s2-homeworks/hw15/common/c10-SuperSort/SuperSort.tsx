@@ -14,12 +14,11 @@ export type SuperSortPropsType = {
 }
 
 export const pureChange = (sort: string, down: string, up: string) => {
-    if (sort) {
-        return up
-    }
-    if (up) {
+    if (sort === '') {
         return down
-    } return sort
+    } else if (sort === 'down') {
+        return up
+    } return ''
     // пишет студент, sort: (click) => down (click) => up (click) => '' (click) => down ...
     // исправить
 }
@@ -53,7 +52,7 @@ const SuperSort: React.FC<SuperSortPropsType> = (
             сделать иконку
             <img
                 id={id + '-icon-' + sort}
-                src={downIcon}
+                src={icon}
                 style={{width: 10, height: 10, marginTop: 10, marginBottom: 0}}
             />
 

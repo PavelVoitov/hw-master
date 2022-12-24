@@ -88,7 +88,7 @@ const HW15 = () => {
         setPage(1) // при сортировке сбрасывать на 1 страницу
 
         sendQuery({
-            sort: 'down',
+            sort: newSort,
             page: page,
             count: count
         } )

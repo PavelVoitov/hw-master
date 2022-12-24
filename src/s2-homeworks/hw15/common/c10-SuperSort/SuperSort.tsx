@@ -2,7 +2,7 @@ import React, {MouseEventHandler} from 'react'
 import down from './downIcon.png'
 
 // добавить в проект иконки и импортировать
-const downIcon = 'down'
+const downIcon = down
 const upIcon = '[/\\]'
 const noneIcon = '[--]'
 
@@ -14,9 +14,12 @@ export type SuperSortPropsType = {
 }
 
 export const pureChange = (sort: string, down: string, up: string) => {
-
-
-return up
+    if (sort) {
+        return up
+    }
+    if (up) {
+        return down
+    } return sort
     // пишет студент, sort: (click) => down (click) => up (click) => '' (click) => down ...
     // исправить
 }
@@ -47,13 +50,14 @@ const SuperSort: React.FC<SuperSortPropsType> = (
             id={id + '-sort-' + value}
             onClick={onChangeCallback}
         >
-            {/*сделать иконку*/}
-            {/*<img*/}
-            {/*    id={id + '-icon-' + sort}*/}
-            {/*    src={icon}*/}
-            {/*/>*/}
+            сделать иконку
+            <img
+                id={id + '-icon-' + sort}
+                src={downIcon}
+                style={{width: 10, height: 10, marginTop: 10, marginBottom: 0}}
+            />
 
-            {icon} {/*а это убрать*/}
+            {/*{icon} /!*а это убрать*!/*/}
         </span>
     )
 }

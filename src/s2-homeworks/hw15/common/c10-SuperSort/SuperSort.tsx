@@ -1,11 +1,12 @@
 import React from 'react'
 import down from './downIcon.png'
 import up from './upIcon.png'
+import none from './noneIcon.png'
 
 // добавить в проект иконки и импортировать
 const downIcon = down
 const upIcon = up
-const noneIcon = '[--]'
+const noneIcon = none
 
 export type SuperSortPropsType = {
     id?: string
@@ -53,15 +54,13 @@ const SuperSort: React.FC<SuperSortPropsType> = (
             id={id + '-sort-' + value}
             onClick={onChangeCallback}
         >
-            {/*сделать иконку*/}
             <img
                 alt={'arrow sort'}
                 id={id + '-icon-' + sort}
                 src={icon}
-                style={{width: 10, height: 10, marginTop: 10, marginBottom: 0}}
+                style={{width: 10, height: 10, marginTop: 10, marginBottom: 0, marginLeft: 10}}
             />
 
-            {/*{icon} /!*а это убрать*!/*/}
         </span>
     )
 }

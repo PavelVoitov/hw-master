@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {MouseEventHandler} from 'react'
+import down from './downIcon.png'
 
 // добавить в проект иконки и импортировать
-const downIcon = '[\\/]'
+const downIcon = 'down'
 const upIcon = '[/\\]'
 const noneIcon = '[--]'
 
@@ -13,8 +14,11 @@ export type SuperSortPropsType = {
 }
 
 export const pureChange = (sort: string, down: string, up: string) => {
+
+
+return up
     // пишет студент, sort: (click) => down (click) => up (click) => '' (click) => down ...
-    return up // исправить
+    // исправить
 }
 
 const SuperSort: React.FC<SuperSortPropsType> = (
@@ -26,6 +30,9 @@ const SuperSort: React.FC<SuperSortPropsType> = (
     const down = '1' + value
 
     const onChangeCallback = () => {
+        console.log('down', down)
+        console.log('sort', sort)
+        console.log('up', up)
         onChange(pureChange(sort, down, up))
     }
 

@@ -5,6 +5,7 @@ import axios from 'axios'
 // import SuperPagination from './common/c9-SuperPagination/SuperPagination'
 import {useSearchParams} from 'react-router-dom'
 import SuperSort from './common/c10-SuperSort/SuperSort'
+import SuperPagination from "./common/c9-SuperPagination/SuperPagination";
 
 /*
 * 1 - дописать SuperPagination
@@ -52,9 +53,12 @@ const HW15 = () => {
         getTechs(params)
             .then((res) => {
                 // делает студент
-
+                if (res) {
+                    setTechs(res.data.techs)
+                    setTotalCount(res.data.totalCount)
+                    setLoading(false)
+                }
                 // сохранить пришедшие данные
-
                 //
             })
     }
@@ -62,16 +66,18 @@ const HW15 = () => {
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
 
-        // setPage(
-        // setCount(
+            setCount(newCount)
+            setPage(newPage)
+            sendQuery({newPage, newCount})
+            setSearchParams({page: `${newPage}`, count: `${newCount}`} )
 
-        // sendQuery(
-        // setSearchParams(
+
 
         //
     }
 
     const onChangeSort = (newSort: string) => {
+        console.log(newSort)
         // делает студент
 
         // setSort(
@@ -88,7 +94,7 @@ const HW15 = () => {
         sendQuery({page: params.page, count: params.count})
         setPage(+params.page || 1)
         setCount(+params.count || 4)
-    }, [])
+    }, [searchParams])
 
     const mappedTechs = techs.map(t => (
         <div key={t.id} className={s.row}>
@@ -109,12 +115,12 @@ const HW15 = () => {
             <div className={s2.hw}>
                 {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
 
-                {/*<SuperPagination*/}
-                {/*    page={page}*/}
-                {/*    itemsCountForPage={count}*/}
-                {/*    totalCount={totalCount}*/}
-                {/*    onChange={onChangePagination}*/}
-                {/*/>*/}
+                <SuperPagination
+                    page={page}
+                    itemsCountForPage={count}
+                    totalCount={totalCount}
+                    onChange={onChangePagination}
+                />
 
                 <div className={s.rowHeader}>
                     <div className={s.techHeader}>
